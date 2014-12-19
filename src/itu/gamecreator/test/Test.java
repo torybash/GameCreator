@@ -27,7 +27,7 @@ import core.content.SpriteContent;
 public class Test {
 	public static void main(String[] args) {
 		Parser p = new Parser("Rules/Rules.txt", "Rules/terminalsymbols.txt");
-		for(int i = 0; i < 10000; i++) {
+		for(int i = 0; i < 100; i++) {
 			p.createGame();
 			System.out.println("\n");
 		}

@@ -68,8 +68,16 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Random;
+
+import ontology.Types;
+import tools.IO;
+import core.Node;
+import core.VGDLFactory;
+import core.content.GameContent;
+import core.content.TerminationContent;
 
 public class Parser {
 	private final Class [] possibleAvatarClass = {AimedAvatar.class, AimedFlakAvatar.class, FlakAvatar.class,
@@ -377,15 +385,17 @@ public class Parser {
 		result += "\tTerminationSet\n";
 		for(int i = 0; i < terminations.size(); i++)
 			result += previous + terminations.get(i).getTerminationString() + "\n";	
-		
-		result += "\tMap\n";
-		//for(int i = 0; i < terminations.size(); i++)
-		result += stringMap + "\n";	
 
 		System.out.println(result);
 		saveGame(result);
 	}
 
+	
+	
+	
+
+	
+	
 	public static void addMissile(Missile missile) {
 		missiles.add(missile);
 	}
